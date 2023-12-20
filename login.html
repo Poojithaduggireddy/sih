@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+       body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color:  rgba(118, 230, 112, 0.8);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #login-form {
+            background-color: rgba(201, 233, 199, 0.8); /* Adjust the transparency as needed */
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        label, input, button {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 8px 16px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+
+        }
+        /* Style to align images to the left */
+        .left-align {
+            float: left; /* Float the image to the left */
+            margin-right: 20px; /* Optional: Add some margin for spacing */
+        }
+
+        /* Clear floating elements */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<header><div class="left-align">
+  <img src="C:\Users\kasus\Downloads\SIHProject\New_test\coallogo.jpg" alt="Ministry of Coal">
+</header>
+<body>
+    <h1 style="text-align: center;">Login Page</h1>
+    
+    <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <button type="submit">Login</button>
+    </form>
+    <script src="{{ url_for('static', filename='login_script.js') }}"></script>
+</body>
+</html>
